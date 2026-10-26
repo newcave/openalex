@@ -6,11 +6,12 @@
 __pycache__/
 *.pyc
 
-# collected data & outputs (kept local only)
-dataset/*
-results/*
-!dataset/.gitkeep
-!results/.gitkeep
+# collected data & outputs (live in newcave/openalex-data, see OPENALEX_DATA_ROOT)
+dataset/
+results/
+archive/수자원_논문/
+archive/results_수자원_실험산출물/
+openalex-data/
 
 # runtime
 logs/

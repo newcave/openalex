@@ -11,15 +11,24 @@
 #   results/<분야>/03_full_period_review/  n_05: 커뮤니티별 근거문서(terms/edges/all_papers), AI 라벨
 #   results/<분야>/04_windowed/            n_06: 5년 구간별 분석
 #
+# dataset/, results/는 DATA_ROOT 아래에 있다. 데이터는 비공개 리포(newcave/openalex-data)에 따로 두고
+# .env의 OPENALEX_DATA_ROOT로 가리킨다(예: ../openalex-data, 상대경로는 이 폴더 기준). 없으면 이 폴더.
+#
 # 새 분야 추가: 아래 _domain(...)으로 Domain 하나를 더 만들어 DOMAINS에 넣으면 된다.
 # 저널 목록 출처: 2026-10-20 부서별 수집 대상 저널 목록(사용자 제공). ISSN은 같은 날 OpenAlex에서 확인했다.
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
+from dotenv import dotenv_values
+
 ROOT = Path(__file__).resolve().parent
+DATA_ROOT = (ROOT / (os.environ.get("OPENALEX_DATA_ROOT")
+                     or dotenv_values(ROOT / ".env").get("OPENALEX_DATA_ROOT")
+                     or ".")).resolve()
 
 
 @dataclass(frozen=True)
@@ -68,11 +77,11 @@ class Domain:
 
 def _domain(key: str, name: str, department: str, journals: list[Journal]) -> Domain:
     """분야명(name)이 그대로 dataset/<name>, results/<name> 폴더 이름이 된다."""
-    results = ROOT / "results" / name
+    results = DATA_ROOT / "results" / name
     corpus = results / "01_corpus"
     return Domain(
         key=key, name=name, department=department, journals=tuple(journals),
-        dataset_dir=ROOT / "dataset" / name,
+        dataset_dir=DATA_ROOT / "dataset" / name,
         shared_source=corpus,
         corpus_path=corpus / "filtered_corpus.parquet",
         dict_path=corpus / "term_normalization_dict.csv",

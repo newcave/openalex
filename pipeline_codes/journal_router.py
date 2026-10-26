@@ -16,12 +16,12 @@ from datetime import datetime, timezone
 import requests
 from dotenv import load_dotenv
 
-from config import DOMAINS, OPENAI_MODEL, ROOT, domains_for_issn
+from config import DATA_ROOT, DOMAINS, OPENAI_MODEL, ROOT, domains_for_issn
 
 load_dotenv(ROOT / ".env")
 
 ROUTER_MODEL = OPENAI_MODEL
-ASSIGNMENTS_PATH = ROOT / "dataset" / "ai_journal_assignments.json"
+ASSIGNMENTS_PATH = DATA_ROOT / "dataset" / "ai_journal_assignments.json"
 OPENALEX_URL = "https://api.openalex.org"
 N_SAMPLE_TITLES = 20
 

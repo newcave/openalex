@@ -1,9 +1,0 @@
-﻿cluster,label,term_count,mean_document_share_pct,mk_tau,mk_p,sen_slope_pct_point_per_year,recent5_minus_first5_pct_point,top_terms
-0,수처리·막공정과 미생물 처리,317,28.9478,0.9077,2.4e-05,0.984974,21.7439,wastewater | performance | process | potential | dissolved | microbial | membrane | matter | role | plant
-1,하천 수문변동·기후·가뭄 연구,291,47.4121,0.9385,1e-06,1.15259,25.1002,groundwater | impact | dynamics | china | control | area | changes | response | region | different
-2,도시 물시스템·저수지 운영 최적화,278,46.3907,0.9262,8e-06,1.228756,25.9043,approach | hydrological | flood | network | precipitation | reservoir | streamflow | prediction | moisture | drought
-3,홍수·유량 예측과 데이터 기반 수문 모델,133,32.8658,0.92,0.0,0.762065,16.6177,water | system | urban | risk | environmental | assessing | review | irrigation | energy | combined
-4,지하수·연안대수층과 수문환경 상호작용,39,4.1415,0.8892,0.0,0.168015,3.3992,co | pressure | permeability | fluid | pore-scale | saline | sensor | note | geological | technical
-5,FDR 군집 5,16,2.1715,0.7846,0.0,0.077206,1.7989,coastal | seawater | intrusion | salt | saltwater | rise | tides | tide | sea-level | mangrove
-6,FDR 군집 6,4,0.1139,0.5015,5.8e-05,0.007792,0.2079,hot | plumbing | spots | premise
-7,FDR 군집 7,2,0.0266,0.4862,0.000111,0.002793,0.0822,dissimilatory | dnra

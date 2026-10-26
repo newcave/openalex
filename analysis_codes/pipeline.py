@@ -33,13 +33,13 @@ from analysis_codes import n_03_rising_terms as rising_terms             # noqa:
 from analysis_codes import n_04_cluster_network as cluster_network       # noqa: E402
 from analysis_codes import n_05_review_docs as review_docs               # noqa: E402
 from analysis_codes import n_06_windowed_analysis as windowed_analysis   # noqa: E402
-from config import DOMAINS, SEED_NORMALIZATION_DICT, Domain              # noqa: E402
+from config import DATA_ROOT, DOMAINS, SEED_NORMALIZATION_DICT, Domain   # noqa: E402
 from pipeline_codes import event_log                                     # noqa: E402
 
 
 def _rel(path: Path) -> str:
     try:
-        return path.relative_to(ROOT).as_posix() + "/"
+        return path.relative_to(DATA_ROOT).as_posix() + "/"
     except ValueError:
         return str(path)
 

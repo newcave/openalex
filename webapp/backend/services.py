@@ -28,7 +28,7 @@ if str(ROOT) not in sys.path:
 from pipeline_codes import pipeline as collection_pipeline          # noqa: E402
 from analysis_codes import pipeline as analysis_pipeline              # noqa: E402
 from analysis_codes import n_06_windowed_analysis as windowed_analysis   # noqa: E402
-from config import DOMAINS, DEFAULT_DOMAIN, OPENALEX_EMAIL, Domain     # noqa: E402
+from config import DATA_ROOT, DOMAINS, DEFAULT_DOMAIN, OPENALEX_EMAIL, Domain  # noqa: E402
 from pipeline_codes import n_01_openalex as openalex                  # noqa: E402
 
 # .env를 여기서 먼저 읽는다. app.py가 이 모듈을 가장 먼저 import하므로, 여기서 안 읽으면
@@ -465,7 +465,7 @@ class DomainService:
     # ------------------------------------------------------------ 데이터 수집 탭
     def dataset_dir_label(self) -> str:
         try:
-            return self.d.dataset_dir.relative_to(ROOT).as_posix() + "/"
+            return self.d.dataset_dir.relative_to(DATA_ROOT).as_posix() + "/"
         except ValueError:
             return str(self.d.dataset_dir)
 

@@ -37,7 +37,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from analysis_codes.n_03_rising_terms import load_inputs, build_fdr_tags, build_cluster_trends, FDR_LABELS  # noqa: E402
-from config import DEFAULT  # noqa: E402
+from config import DATA_ROOT, DEFAULT  # noqa: E402
 
 OUTPUT = DEFAULT.full_output
 MIN_COOCCUR = 2  # 실측 결과 채택값 (min_cooccur=3은 과분할이라 기각)
@@ -109,7 +109,7 @@ def main() -> None:
     series.to_parquet(OUTPUT / "cluster_trends_fdr_assoc.parquet", index=False)
     summary.to_csv(OUTPUT / "cluster_trends_summary_fdr_assoc.csv", index=False, encoding="utf-8-sig")
     (OUTPUT / "run_summary.json").write_text(json.dumps({
-        "source": f"{DEFAULT.shared_source.relative_to(ROOT).as_posix()} (unigram_long/filtered_corpus/term_normalization_dict)",
+        "source": f"{DEFAULT.shared_source.relative_to(DATA_ROOT).as_posix()} (unigram_long/filtered_corpus/term_normalization_dict)",
         "fdr_method": "Benjamini-Hochberg",
         "fdr_alpha": 0.05,
         "louvain_seed": LOUVAIN_SEED,

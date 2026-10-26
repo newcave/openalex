@@ -13,7 +13,8 @@ cd /home/openalex/src
 .venv/bin/python webapp/app.py              # http://<서버>:8050
 ```
 
-- 반드시 이 폴더(프로젝트 루트)에서 실행합니다. 코드가 `dataset/`, `results/`를 루트 기준 경로로 찾습니다.
+- 반드시 이 폴더(프로젝트 루트)에서 실행합니다. 코드가 `dataset/`, `results/`를 데이터 루트(`OPENALEX_DATA_ROOT`, 없으면 프로젝트 루트) 기준 경로로 찾습니다.
+- 수집 데이터와 분석 산출물은 비공개 리포 [newcave/openalex-data](https://github.com/newcave/openalex-data)에 있습니다. 이 리포 옆에 클론하고 `.env`에 `OPENALEX_DATA_ROOT=../openalex-data`를 적습니다.
 - `webapp/app.py` 마지막 줄의 `app.run(...)`에서 host/port/debug를 설정합니다. 외부 접속은 `host="0.0.0.0"`, 운영 시에는 `debug=False`를 씁니다.
 
 ### 서버 부팅 시 자동 실행 (systemd)
@@ -40,6 +41,7 @@ sudo journalctl -u openalex-webapp -f
 |---|---|
 | `OPENAI_API_KEY` | 커뮤니티 이름(AI 라벨)·해설 생성, 새 저널의 분야 자동 분류. 모델은 `config.py`의 `OPENAI_MODEL` |
 | `OPENALEX_API_KEY` | OpenAlex 논문 수집 (없어도 수집은 되지만 하루 요청 한도가 낮음) |
+| `OPENALEX_DATA_ROOT` | `dataset/`, `results/`, `archive/` 데이터가 있는 폴더 (openalex-data 클론 위치, 상대경로는 프로젝트 루트 기준). 없으면 프로젝트 루트 |
 
 루트에 `.env` 파일로 두거나 서버 환경변수로 설정합니다. 값은 담당자에게 따로 받습니다.
 

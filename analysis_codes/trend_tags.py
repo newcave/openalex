@@ -29,11 +29,11 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import numpy as np
 import pandas as pd
 import pymannkendall as mk
+
+from config import DATA_ROOT
 
 # 게이트2(최소빈도) 값. "26년 통틀어 N건 이상"만 분석대상으로 본다.
 # analysis/explore_min_count_threshold.ipynb로 분포를 보고 사용자가 15로 확정(2026-08-19).
@@ -44,7 +44,7 @@ MIN_TOTAL_COUNT = 15
 
 # 예전 Streamlit 대시보드(archive/analysis_experiments/dashboard_view.py)가 읽던 미리 계산해둔 파일 위치
 # (archive/analysis_experiments/export_trend_tags.py가 만든다). 현재 웹앱은 이 파일을 쓰지 않는다.
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "archive" / "results_수자원_실험산출물" / "01_corpus"
+OUTPUT_DIR = DATA_ROOT / "archive" / "results_수자원_실험산출물" / "01_corpus"
 PRECOMPUTED_PATHS = {
     "유니그램": OUTPUT_DIR / "trend_tags_unigram_all.parquet",
     "바이그램": OUTPUT_DIR / "trend_tags_bigram_all.parquet",

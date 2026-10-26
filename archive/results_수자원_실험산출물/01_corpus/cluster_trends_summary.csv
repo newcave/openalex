@@ -1,6 +1,0 @@
-﻿cluster,label,term_count,mean_document_share_pct,mk_tau,mk_p,sen_slope_pct_point_per_year,recent5_minus_first5_pct_point,top_terms
-0,수처리 공정·미생물·수환경 오염,436,31.6894,0.8769,7.6e-05,0.975531,21.7219,wastewater | performance | process | mechanisms | potential | dissolved | microbial | membrane | matter | role
-1,하천 유역·기후 변동성과 지표수문 반응,369,51.8195,0.8831,0.000139,1.117592,24.6231,river | impact | hydrological | dynamics | china | precipitation | area | moisture | changes | response
-2,수자원·도시 물시스템 관리와 최적화,291,43.3133,0.8954,1e-06,0.904088,19.8388,water | system | surface | urban | reservoir | control | optimization | risk | integrated | operation
-3,수문 관측·예측과 데이터 기반 방법,258,36.985,0.9323,0.0,1.017155,21.4259,approach | data | flood | network | streamflow | prediction | forecasting | monitoring | framework | learning
-4,연안 대수층·지하수 기원 추적과 지중유체(CO₂) 저장,108,17.8457,0.9138,0.0,0.448475,9.5935,groundwater | source | coastal | level | interactions | shallow | sources | stable | co | isotope

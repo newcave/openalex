@@ -1,5 +1,8 @@
 # archive (보관용)
 
+`수자원_논문/`과 `results_수자원_실험산출물/`의 데이터는 비공개 리포 [newcave/openalex-data](https://github.com/newcave/openalex-data)의
+`archive/`로 옮겼다. 이 리포에는 실험 스크립트(`analysis_experiments/`)만 남아 있다.
+
 ## 수자원_논문/
 2026-10-20까지 웹앱의 "수자원 분야"였던 논문 버전(저널 12종, 2000~2025). 논문에 실린 확정 결과이며,
 연구소별 분야 체계(config.py)로 바뀌면서 웹앱에서 빠졌다. 새 "수자원환경" 분야와는 저널 구성이 다르다.
