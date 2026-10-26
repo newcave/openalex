@@ -17,3 +17,7 @@ openalex-data/
 logs/
 webapp/.cache_diskcache/
 webapp/.state/
+
+# streamlit viewer
+.data/
+.streamlit/secrets.toml

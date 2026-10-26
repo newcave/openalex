@@ -17,6 +17,14 @@ cd /home/openalex/src
 - 수집 데이터와 분석 산출물은 비공개 리포 [newcave/openalex-data](https://github.com/newcave/openalex-data)에 있습니다. 이 리포 옆에 클론하고 `.env`에 `OPENALEX_DATA_ROOT=../openalex-data`를 적습니다.
 - `webapp/app.py` 마지막 줄의 `app.run(...)`에서 host/port/debug를 설정합니다. 외부 접속은 `host="0.0.0.0"`, 운영 시에는 `debug=False`를 씁니다.
 
+### 결과 뷰어 (Streamlit Cloud, 읽기 전용)
+
+`streamlit_app.py`는 이미 만들어진 `results/<분야>/`만 보여주는 뷰어입니다(수집·분석·AI 라벨 생성 없음). 결과가 있는 분야와 `archive`의 수자원(논문) 버전이 나옵니다.
+
+- 로컬: `streamlit run streamlit_app.py` (`.env`의 `OPENALEX_DATA_ROOT` 사용)
+- Streamlit Cloud: 리포 `newcave/openalex`, 브랜치 `main`, Main file `streamlit_app.py`, Python 3.12. App settings › Secrets에 `.streamlit/secrets.toml.example` 내용을 넣고 `GITHUB_TOKEN`에 openalex-data 읽기 전용 토큰(fine-grained, Contents: Read-only)을 적습니다. 앱이 시작될 때 openalex-data에서 결과 폴더만 받아옵니다(수집 원본 `dataset/` 제외, 약 90MB).
+- EC2에서 새로 분석한 결과를 openalex-data에 커밋·푸시한 뒤 Streamlit Cloud에서 앱을 Reboot하면 반영됩니다.
+
 ### 서버 부팅 시 자동 실행 (systemd)
 
 AWS EC2 인스턴스가 부팅될 때 웹앱도 자동으로 시작하고, 인스턴스가 종료될 때 웹앱도 함께 종료하려면 서버에서 한 번 등록합니다.
