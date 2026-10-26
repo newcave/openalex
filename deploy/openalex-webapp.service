@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenAlex Research Trends Web App
+After=network.target
+
+[Service]
+Type=simple
+User=openalex
+WorkingDirectory=/home/openalex/src
+ExecStart=/home/openalex/src/.venv/bin/python /home/openalex/src/webapp/app.py
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=30
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

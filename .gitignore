@@ -1,0 +1,22 @@
+# secrets
+.env
+
+# python / venv
+.venv/
+__pycache__/
+*.pyc
+
+# collected data & outputs (kept local only)
+dataset/*
+results/*
+!dataset/.gitkeep
+!results/.gitkeep
+archive/수자원_논문/
+archive/results_수자원_실험산출물/
+*.parquet
+*.xlsx
+
+# runtime
+logs/
+webapp/.cache_diskcache/
+webapp/.state/
