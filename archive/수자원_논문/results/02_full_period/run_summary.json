@@ -1,0 +1,16 @@
+{
+  "source": "analysis/output_임계15 (unigram_long/filtered_corpus/term_normalization_dict 공유, 변경 없음)",
+  "fdr_method": "Benjamini-Hochberg",
+  "fdr_alpha": 0.05,
+  "louvain_seed": 0,
+  "raw_rising_terms": 1462,
+  "fdr_rising_terms": 1080,
+  "rising_terms": 1080,
+  "edges": 51862,
+  "isolated_terms": 0,
+  "clusters": 8,
+  "cluster_sizes": "317|291|278|133|39|16|4|2",
+  "modularity": 0.29981282646716106,
+  "weight_scheme": "association_strength",
+  "min_cooccurrence": 2
+}

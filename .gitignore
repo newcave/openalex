@@ -11,10 +11,6 @@ dataset/*
 results/*
 !dataset/.gitkeep
 !results/.gitkeep
-archive/수자원_논문/
-archive/results_수자원_실험산출물/
-*.parquet
-*.xlsx
 
 # runtime
 logs/

@@ -1,0 +1,25 @@
+{
+  "window": "2021_2025",
+  "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_years": 5,
+  "documents_in_window": 25762,
+  "min_total_count": 15,
+  "min_cooccurrence": 2,
+  "louvain_seed": 0,
+  "candidate_terms": 2416,
+  "tau_positive_terms": 1086,
+  "rising_terms": 1086,
+  "edges": 36035,
+  "isolated_terms": 0,
+  "clusters": 12,
+  "cluster_sizes": "349|271|221|74|60|53|35|9|5|4|3|2",
+  "modularity": 0.3062037072973604,
+  "weight_scheme": "association_strength",
+  "rising_definition": "tau>0 (유의성 검정 없음)"
+}

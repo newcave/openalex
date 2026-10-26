@@ -1,0 +1,48 @@
+﻿window,cluster,size,top_terms
+2000_2005,0,136,model | river | application | estimation | data | flood | hydrological | parameters | impact | assessment | use | hydrologic | neural | response | prediction
+2000_2005,1,122,catchment | surface | stream | dynamics | spatial | watershed | control | area | variability | scale | urban | moisture | wetland | small | phosphorus
+2000_2005,2,111,flow | approach | simulation | hydraulic | field | numerical | heterogeneous | experiment | properties | zone | stochastic | tracer | fractured | estimating | transfer
+2000_2005,3,109,analysis | study | method | evaluation | experimental | design | performance | equation | behavior | element | concrete | identification | continuous | theory | ground
+2000_2005,4,74,effect | carbon | acid | microbial | adsorption | temperature | plant | iron | biofilm | membrane | exchange | heavy | batch | ozonation | disinfection
+2000_2005,5,31,groundwater | analytical | coastal | level | recharge | energy | china | estuary | north | table | sea | towards | fluctuations | behaviour | depth
+2000_2005,6,30,management | reservoir | optimal | optimization | resources | integrated | review | genetic | fuzzy | supply | irrigation | planning | decision | support | demand
+2000_2005,7,27,high | erosion | information | curves | curve | resolution | remote | digital | extraction | sensing | canadian | classification | satellite | image | terrain
+2000_2005,8,24,time | monitoring | series | content | sampling | snowmelt | partial | density | domain | space | reflectometry | real | saline | persistence | markov
+2000_2005,9,18,channel | wave | gravel | alluvial | downstream | geometry | waves | equivalent | short | long | homogeneous | term | bank | one-dimensional | stratified
+2000_2005,10,7,southern | columbia | british | oscillation | ni | regime | el
+2000_2005,11,4,recovery | determining | coli | escherichia
+2006_2010,0,145,model | method | approach | hydrological | estimation | rainfall | watershed | flood | network | hydrologic | uncertainty | precipitation | streamflow | reservoir | prediction
+2006_2010,1,136,effect | wastewater | organic | sludge | performance | concentration | natural | different | membrane | potential | drinking | microbial | oxidation | formation | investigation
+2006_2010,2,117,river | basin | impact | surface | climate | spatial | change | use | case | variability | china | land | response | discharge | lake
+2006_2010,3,94,flow | soil | data | dynamics | hydraulic | condition | field | control | moisture | scale | temperature | tracer | monitoring | characterization | shallow
+2006_2010,4,92,water | assessment | quality | area | urban | source | integrated | agricultural | environmental | coastal | waters | risk | identification | review | supply
+2006_2010,5,46,forest | snow | evapotranspiration | role | evaporation | cover | remote | sensing | stable | isotope | mapping | gis | isotopes | reference | determining
+2006_2010,6,13,time | series | mean | assess | residence | long | travel | times | term | transit | short | contrasting | correction
+2011_2015,0,185,wastewater | removal | organic | sludge | performance | carbon | process | natural | microbial | membrane | concentration | activated | anaerobic | matter | degradation
+2011_2015,1,154,analysis | system | distribution | dynamics | management | urban | reservoir | control | design | resources | optimization | integrated | implications | risk | framework
+2011_2015,2,143,method | approach | flood | application | network | streamflow | prediction | comparison | drought | forecasting | ensemble | two | multiple | forecast | index
+2011_2015,3,141,rainfall | precipitation | stream | changes | temperature | field | discharge | different | temporal | lake | events | level | high | observations | future
+2011_2015,4,115,groundwater | aquifer | condition | porous | numerical | interactions | solute | investigation | well | karst | evolution | co | reactive | predicting | laboratory
+2011_2015,5,23,channel | times | baseflow | separation | public | long | recession | residence | transit | base | images | term | digital | mode | facilities
+2011_2015,6,20,concrete | crop | stress | structural | irrigated | uptake | root | strength | shear | ratio | process-based | steel | failure | reinforced | connection
+2011_2015,7,19,indicators | depth | critical | slope | recent | challenges | tracking | steep | persistence | hillslopes | advances | perspectives | cross | two-stage | markers
+2011_2015,8,4,caused | increased | expression | gene
+2016_2020,0,266,river | impact | soil | climate | hydrological | assessment | china | surface | streamflow | sediment | runoff | moisture | variability | region | area
+2016_2020,1,210,organic | removal | performance | sludge | process | carbon | mechanisms | potential | microbial | dissolved | role | matter | formation | natural | activated
+2016_2020,2,161,water | approach | flood | distribution | network | reservoir | quality | operation | drinking | environmental | level | novel | daily | forecast | improved
+2016_2020,3,139,flow | effect | dynamics | simulation | condition | media | porous | experimental | experiment | coupled | investigation | drainage | behavior | co | transfer
+2016_2020,4,78,groundwater | source | coastal | interactions | sources | nitrate | karst | tracer | complex | combined | mixing | isotopes | well | isotope | isotopic
+2016_2020,5,23,review | critical | occurrence | research | challenges | irrigated | applicability | practical | agriculture | opportunities | engineering | perspectives | maps | advances | aromatic
+2016_2020,6,19,factors | loading | biomass | algal | influencing | effectiveness | key | internal | eutrophic | cyanobacteria | driving | phytoplankton | cyanobacterial | blooms | improves
+2021_2025,0,349,river | impact | soil | china | dynamics | study | surface | sediment | drought | rainfall | runoff | processes | characteristics | lake | region
+2021_2025,1,271,wastewater | mechanisms | treatment | removal | performance | carbon | enhanced | nitrogen | membrane | role | degradation | production | recovery | efficient | oxidation
+2021_2025,2,221,system | flood | learning | urban | prediction | framework | machine | control | deep | risk | quality | novel | environmental | integrated | coupled
+2021_2025,3,74,organic | insights | dissolved | matter | microplastics | drinking | environment | transformation | aquatic | disinfection | isotope | molecular | composition | fate | cycling
+2021_2025,4,60,porous | plant | heterogeneous | co | emissions | induced | gas | seawater | methane | extraction | oxide | pore-scale | geological | phase | electrical
+2021_2025,5,53,microbial | resistance | structure | community | antibiotic | genes | bacterial | communities | regulation | stability | functional | metabolic | diversity | deciphering | assembly
+2021_2025,6,35,substances | pfas | extracellular | ammonium | enrichment | per | structural | polyfluoroalkyl | mining | polymeric | microalgae | stratified | hydrogeochemical | dewatering | protein
+2021_2025,7,9,mixed | element | earth | metals | toxic | rare | potentially | throughfall | stemflow
+2021_2025,8,5,diversion | projects | inter-basin | south-to-north | route
+2021_2025,9,4,concurrent | eddy | covariance | multi-stage
+2021_2025,10,3,soft | computing | high-performance
+2021_2025,11,2,abrupt | alternation

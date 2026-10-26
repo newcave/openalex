@@ -1,0 +1,25 @@
+{
+  "window": "2006_2010",
+  "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+  ],
+  "n_years": 5,
+  "documents_in_window": 13646,
+  "min_total_count": 15,
+  "min_cooccurrence": 2,
+  "louvain_seed": 0,
+  "candidate_terms": 1362,
+  "tau_positive_terms": 643,
+  "rising_terms": 643,
+  "edges": 15546,
+  "isolated_terms": 0,
+  "clusters": 7,
+  "cluster_sizes": "145|136|117|94|92|46|13",
+  "modularity": 0.29036094616058955,
+  "weight_scheme": "association_strength",
+  "rising_definition": "tau>0 (유의성 검정 없음)"
+}
