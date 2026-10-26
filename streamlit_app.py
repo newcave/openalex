@@ -30,10 +30,16 @@ DATA_SPARSE_DIRS = ["results", "archive/수자원_논문/results"]
 st.set_page_config(page_title="OpenAlex 연구주제 뷰어", page_icon="💧", layout="wide")
 
 
+_DATA_PROBLEMS: list[str] = []   # 결과를 못 찾았을 때 화면에 보여줄 원인
+
+
 def _secret(name: str) -> str | None:
     try:
         return st.secrets.get(name)
-    except Exception:   # secrets.toml이 아예 없으면 예외가 난다(로컬 실행)
+    except FileNotFoundError:   # secrets.toml이 아예 없다(로컬 실행)
+        return None
+    except Exception as e:      # Secrets TOML 문법 오류 등
+        _DATA_PROBLEMS.append(f"Secrets를 읽지 못했습니다: {e}")
         return None
 
 
@@ -59,8 +65,15 @@ def _resolve_data_root() -> None:
     if configured and (ROOT / configured).resolve().exists():
         return
     token = _secret("GITHUB_TOKEN")
-    if token:
-        os.environ["OPENALEX_DATA_ROOT"] = _clone_data_repo(_secret("DATA_REPO") or DATA_REPO_DEFAULT, token)
+    if not token:
+        _DATA_PROBLEMS.append("Secrets에 GITHUB_TOKEN이 없습니다.")
+        return
+    repo = _secret("DATA_REPO") or DATA_REPO_DEFAULT
+    try:
+        os.environ["OPENALEX_DATA_ROOT"] = _clone_data_repo(repo, token)
+    except subprocess.CalledProcessError as e:
+        err = (e.stderr or b"").decode("utf-8", "replace").replace(token, "***").strip()
+        _DATA_PROBLEMS.append(f"{repo}를 받지 못했습니다(토큰 권한·만료 확인): {err}")
 
 
 _resolve_data_root()
@@ -271,9 +284,13 @@ def main() -> None:
     svcs = _services()
     st.sidebar.title("OpenAlex 연구주제 뷰어")
     if not svcs:
+        _services.clear()   # 빈 결과를 캐시해 두지 않는다
         st.title("OpenAlex 연구주제 뷰어")
         st.warning(f"분석 결과를 찾지 못했습니다. 데이터 위치: `{DATA_ROOT}`  \n"
-                   "로컬은 .env의 OPENALEX_DATA_ROOT, Streamlit Cloud는 Secrets의 GITHUB_TOKEN을 확인하세요.")
+                   "로컬은 .env의 OPENALEX_DATA_ROOT, Streamlit Cloud는 Secrets의 GITHUB_TOKEN을 확인하세요.  \n"
+                   "Secrets를 바꾼 뒤에는 앱을 Reboot해야 반영됩니다.")
+        for problem in _DATA_PROBLEMS:
+            st.error(problem)
         return
     name = st.sidebar.radio("분야", list(svcs))
     svc = svcs[name]
